@@ -5,10 +5,10 @@
     <title>dice rolling</title>
 </head>
 <body>
-    <h1>Roll: <?= $roll; ?></h1>
-    <h1>Guess: <?= $guess; ?></h1>
-    <?php if ($roll == $guess): ?>
+    <h1>Roll: {{{ $roll }}}</h1>
+    <h1>Guess: {{{ $guess }}}</h1>
+    @if ($roll == $guess)
         <h1>Good Guess!</h1>
-    <?php endif; ?>
+    @endif
 </body>
 </html>

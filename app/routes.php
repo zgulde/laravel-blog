@@ -16,16 +16,21 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/fizzbuzz/{n?}', function($n = 100)
+Route::get('/fizzbuzz/{max?}', function($max = 100)
 {
-    $fb = [];
-    for ($i = 1; $i <= $n; $i++){
-        $msg = '';
-        if ($i % 3 == 0) $msg .= 'fizz';
-        if ($i % 5 == 0) $msg .= 'buzz';
-        $fb[] = ($msg == '') ? $i: $msg;
-    }
-    return implode('<br/>', $fb);
+
+    $data =
+    [
+        'numbers' => array_map(function($num)
+        {
+            $msg = '';
+            if ($num % 3 == 0) $msg .= 'fizz';
+            if ($num % 3 == 0) $msg .= 'buzz';
+            return ($msg != '') ? $msg: $num;
+        }, range(1, $max))
+    ];
+
+    return View::make('fizzbuzz')->with($data);
 });
 
 Route::get('/test', function()
@@ -41,12 +46,12 @@ Route::get('/sayHello/{name?}', function($name = 'user')
 
 Route::get('/resume', function()
 {
-    return 'awesome_polished_resume.pdf';
+    return View::make('resume');
 });
 
 Route::get('/portfolio', function()
 {
-    return 'shiny_flashy_portfolio_page.html';
+    return View::make('portfolio');
 });
 
 Route::get('/rolldice/{guess}', function($guess)
