@@ -1,15 +1,11 @@
-@extends('layouts.master')
-
-@section('top-script')
-    <link rel="stylesheet" href="/css/weather-map.css">
-@stop
-
-@section('bottom-script')
-    <script type="text/javascript" src="/js/weather.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZVwMJ5Sk5XdlftXRSx2Ihnb6y_nBxcuw"></script>
-@stop
-
-@section('content')
+<html>
+<head>
+    <title>My Weather Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/weather_map.css">
+</head>
+<body>
     <div class="container">
         <div id="main-row" class="row">
 
@@ -22,6 +18,7 @@
             </div>
 
             <div class="col-md-3 options-area">
+                <form id="weather-options">
                 <h3 class="forecast-option">Forecast Options</h3>
 
                 <div id="forecast-options">
@@ -61,8 +58,16 @@
                     <h5 id="current-lat-lng"></h5>
                     <select id="location-select"></select>
                 </div>
-                <button id="go-btn">Go!</button>
+                <button type='submit' id="go-btn">Go!</button>
+                </form>
             </div>
         </div> <!--/.row-->
     </div> <!--/.container-->
-@stop
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZVwMJ5Sk5XdlftXRSx2Ihnb6y_nBxcuw"></script>
+<script src="/js/weather.js"></script>
+</html>
+
+<!-- my api key: f74c0a4204389722b788e0af5c916ffa -->

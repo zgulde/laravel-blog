@@ -1,16 +1,12 @@
-@extends('layouts.master')
-
-@section('top-script')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Simon!</title>
     <link rel="stylesheet" href="/css/simon.css">
     <link rel="stylesheet" href="/css/simon_animations.css">
-@stop
-
-@section('bottom-script')
-    <script src="/js/simon.js"></script>
-@stop
-
-
-@section('content')
+</head>
+<body>
     <div id="game">
         <div class="color-btn" id="green"></div>
         <div class="color-btn" id="red"></div>
@@ -42,4 +38,7 @@
 
     </div>
     <div id="loading-bar"></div>
-@stop
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/simon.js"></script>
+</body>
+</html>

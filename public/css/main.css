@@ -2,4 +2,18 @@ body {
   background-color: black;
   color: white; }
 
+nav {
+  padding: 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white; }
+  nav a {
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 1.25em;
+    border-left: 1px solid #c8c8c8;
+    border-right: 1px solid #c8c8c8;
+    color: lightblue; }
+  nav a:visited {
+    color: lightblue; }
+
 /*# sourceMappingURL=main.css.map */

@@ -11,65 +11,16 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'HomeController@showWelcome');
 
-Route::get('/fizzbuzz/{max?}', function($max = 100)
-{
+Route::get('/sayHello/{name?}', 'HomeController@sayHello');
 
-    $data =
-    [
-        'numbers' => array_map(function($num)
-        {
-            $msg = '';
-            if ($num % 3 == 0) $msg .= 'fizz';
-            if ($num % 3 == 0) $msg .= 'buzz';
-            return ($msg != '') ? $msg: $num;
-        }, range(1, $max))
-    ];
+Route::get('/rollDice/{guess?}', 'HomeController@rollDice');
 
-    return View::make('fizzbuzz')->with($data);
-});
+Route::get('/resume', 'HomeController@showResume');
 
-Route::get('/test', function()
-{
-    return View::make('hello');
-});
+Route::get('/portfolio', 'HomeController@showPortfolio');
 
-Route::get('/sayHello/{name?}', function($name = 'user')
-{
-    $data = ['name' => $name];
-    return View::make('my-first-view')->with($data);
-});
+Route::get('/portfolio/weather-map', 'HomeController@showWeatherMap');
 
-Route::get('/resume', function()
-{
-    return View::make('resume');
-});
-
-Route::get('/portfolio', function()
-{
-    return View::make('portfolio');
-});
-
-Route::get('/rolldice/{guess}', function($guess)
-{
-    $data = [
-        'roll' => rand(1,6),
-        'guess' => $guess
-    ];
-
-    return View::make('roll-dice')->with($data);
-});
-
-Route::get('/projects/weather-map', function()
-{
-   return View::make('weather-map');
-});
-
-Route::get('/projects/simple-simon', function()
-{
-    return View::make('simple-simon');
-});
+Route::get('/portfolio/simple-simon', 'HomeController@showSimpleSimon');

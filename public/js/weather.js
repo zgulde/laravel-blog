@@ -91,18 +91,11 @@ $(document).ready(function(){
         });// end of ajax.done()
     }
 
-    $('#location-results').hide();
-    $('#drop-marker-btn').hide();
-
-    //creates a geocoder and geocodes based on wheter the
-    //search field or marker is used
-    //shows the search-results area
-    //sets the searchResults to the geocoder results
-    //calls buildDailyForecast with getForecastOptions()
-    $('#go-btn').click(function(){
+    function onGoClick (e) {
         var geocoder = new google.maps.Geocoder();
         var geocoderRequest = {};
         resultsIndex = 0;
+        e.preventDefault();
 
         $('#forecast-options').slideUp(300);
         $('.options-area').children().first().attr('pseudo-content','<');
@@ -130,7 +123,18 @@ $(document).ready(function(){
                     alert("Geocoding was not successful - STATUS: " + status);
                 }
             });
-    });
+    }
+
+    $('#location-results').hide();
+    $('#drop-marker-btn').hide();
+
+    //creates a geocoder and geocodes based on wheter the
+    //search field or marker is used
+    //shows the search-results area
+    //sets the searchResults to the geocoder results
+    //calls buildDailyForecast with getForecastOptions()
+    $('#go-btn').on('click', onGoClick);
+    $('#weather-options').on('submit', onGoClick);
 
     $('.forecast-option').attr('pseudo-content','V').attr('expanded','true');
     $('.forecast-option').click(function(){
