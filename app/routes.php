@@ -63,3 +63,13 @@ Route::get('/rolldice/{guess}', function($guess)
 
     return View::make('roll-dice')->with($data);
 });
+
+Route::get('/projects/weather-map', function()
+{
+   return View::make('weather-map');
+});
+
+Route::get('/projects/simple-simon', function()
+{
+    return View::make('simple-simon');
+});

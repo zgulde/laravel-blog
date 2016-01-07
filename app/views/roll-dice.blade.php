@@ -9,6 +9,8 @@
     <h1>Guess: {{{ $guess }}}</h1>
     @if ($roll == $guess)
         <h1>Good Guess!</h1>
+    @else
+        <h2>wrong!</h2>
     @endif
 </body>
 </html>
