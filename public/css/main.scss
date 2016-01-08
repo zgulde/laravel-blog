@@ -1,14 +1,12 @@
-body{
-    background-color: black;
-    color: white;
-}
-
 nav{
 
     padding: 5px;
 
     border-top   : 1px solid white;
     border-bottom: 1px solid white;
+
+    text-align: center;
+    background-color: rgb(240,240,240);
 
     a {
         padding: 5px 10px;
@@ -18,10 +16,10 @@ nav{
         border-left: 1px solid rgb(200,200,200);
         border-right: 1px solid rgb(200,200,200);
 
-        color: lightblue;
+        color: navy;
     }
 
     a:visited{
-        color: lightblue;
+        color: navy;
     }
 }

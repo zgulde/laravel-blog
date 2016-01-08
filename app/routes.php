@@ -24,3 +24,5 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 Route::get('/portfolio/weather-map', 'HomeController@showWeatherMap');
 
 Route::get('/portfolio/simple-simon', 'HomeController@showSimpleSimon');
+
+Route::resource('posts', 'PostsController');
