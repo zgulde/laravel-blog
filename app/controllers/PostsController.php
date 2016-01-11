@@ -17,14 +17,8 @@ class PostsController extends \BaseController {
                 $post->content = substr($post->content, 0, $truncateAt) . '...';
             }
 
-            // $date = strtotime($post->created_at->date);
-            // dd($post->created_at);
-            // $post->created_at = date("F d, Y", $date);
-
             return $post;
         }, $posts->all());
-
-        // dd(Post::all());
 
         $data = ['posts' => $posts];
 
@@ -121,7 +115,8 @@ class PostsController extends \BaseController {
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
     }
 
 
