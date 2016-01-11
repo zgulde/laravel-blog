@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/main.css">
     @yield('top-script')
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     @yield('content')

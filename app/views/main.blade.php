@@ -5,11 +5,16 @@
 @section('top-script')
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/style.css">
 @stop
 
 @section('bottom-script')
     <script type="text/javascript" src="js/main.js"></script>
+@stop
+
+@section('nav-links')
+    <a href="#projects" id="projects-nav">Projects</a>
+    <a href="#personal" id="personal-nav">Personal</a>
+    <a href="#contact" id="contact-nav">Contact</a>
 @stop
 
 @section('content')

@@ -10,13 +10,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 @stop
 
+@section('nav-links')
+    <a href="{{ action('HomeController@showLanding') }}">Home</a>
+    <a href="{{ action('PostsController@index') }}" class="nav-current">Blog</a>
+    <a href="{{ action('PostsController@create') }}">New Post</a>
+    <a href="{{ action('HomeController@showLanding') }}#contact">Contact</a>
+@stop
+
 @section('content')
+    @include('partials.navbar')
     <div class="container">
         @foreach($posts as $post)
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h2>
-                        <a href="{{{action('PostsController@show', $post->id)}}}">{{{ $post->title }}}</a>
+                        <a href="{{{action('PostsController@show', $post->title )}}}">{{{ $post->title }}}</a>
                      </h2>
                     @if($post->image)
                         <img src="{{{ $post->image }}}" alt="{{{ $post->title . ' image' }}}" class="pull-left" style="max-width: 20%; margin: 0 15px 1px 0">

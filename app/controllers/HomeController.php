@@ -46,6 +46,11 @@ class HomeController extends BaseController {
         return View::make('my-first-view')->with($data);
     }
 
+    public function showLanding()
+    {
+        return View::make('main');
+    }
+
     public function rollDice($guess = 0)
     {
         $data = [

@@ -12,8 +12,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 @stop
 
-@section('content')
+@section('nav-links')
+    <a href="{{ action('HomeController@showLanding') }}">Home</a>
+    <a href="{{ action('PostsController@index') }}">Blog</a>
+    <a href="{{ action('PostsController@create') }}">New Post</a>
+    <a href="{{ action('HomeController@showLanding') }}#contact">Contact</a>
+@stop
 
+@section('content')
+@include('partials.navbar')
 <div class="container">
     <div class="row">
         <div class="col-md-8">

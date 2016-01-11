@@ -19,7 +19,7 @@ $(document).ready(function(){
 
         var projectsOffset = $('#projects').offset().top;
         var personalOffset = $('#personal').offset().top;
-        var contactOffset = $('#contact').offset().top;
+        var contactOffset = $('#contact').offset().top - 20;
 
         //set current navlink
         $('#navbar a').removeClass('nav-current');

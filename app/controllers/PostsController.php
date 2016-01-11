@@ -63,9 +63,15 @@ class PostsController extends \BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($idOrTitle)
     {
-        $data = ['post' => Post::find($id)];
+        if (is_numeric($idOrTitle)) {
+            $post = Post::find($idOrTitle);
+        } else {
+            $post = Post::where('title', '=', $idOrTitle)->first();
+        }
+
+        $data = ['post' => $post];
         return View::make('posts.show')->with($data);
     }
 

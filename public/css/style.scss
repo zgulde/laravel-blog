@@ -23,12 +23,12 @@ body{
     background: url(/media/concrete_seamless.png);
     background-attachment: fixed;
     margin-top: -75px;
-    padding-top: 50px;
+    padding-top: 75px;
 }
 
 
 a{
-    text-decoration: underline;
+    text-decoration: none;
     color: $color-1;
 }
 
@@ -60,7 +60,7 @@ a:hover{
     visibility: hidden;
 }
 
-#navbar{
+#navbar, .fixed-nav{
     border-top: 1px solid $color-1;
     border-bottom: 1px solid $color-1;
     padding: 2px;
@@ -138,6 +138,13 @@ a:hover{
 .hero-text-subtitle{
     bottom: 5vh;
     margin: 0 25vw;
+}
+
+.fixed-nav{
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
 }
 
 #title-area{

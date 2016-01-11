@@ -7,7 +7,13 @@
 <link rel="stylesheet" href="/css/resume.css">
 @stop
 
+@section('nav-links')
+    <a href="{{ action('HomeController@showLanding') }}">Home</a>
+    <a href="{{ action('PostsController@index') }}">Blog</a>
+@stop
+
 @section('content')
+@include('partials.navbar')
 <div class="container">
     <h1 class="pull-left">Zachary Gulde</h1>
 

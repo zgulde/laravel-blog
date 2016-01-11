@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-    return View::make('main');
-});
+Route::get('/', 'HomeController@showLanding');
 
 Route::get('/sayHello/{name?}', 'HomeController@sayHello');
 
