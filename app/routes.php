@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', function()
+{
+    return View::make('main');
+});
 
 Route::get('/sayHello/{name?}', 'HomeController@sayHello');
 
@@ -21,9 +24,9 @@ Route::get('/resume', 'HomeController@showResume');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
-Route::get('/portfolio/weather-map', 'HomeController@showWeatherMap');
+Route::get('/weather-map', 'HomeController@showWeatherMap');
 
-Route::get('/portfolio/simple-simon', 'HomeController@showSimpleSimon');
+Route::get('/simple-simon', 'HomeController@showSimpleSimon');
 
 Route::resource('posts', 'PostsController');
 

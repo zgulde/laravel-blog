@@ -16,7 +16,6 @@ class PostsController extends \BaseController {
             if (strlen($post->content) > $truncateAt){
                 $post->content = substr($post->content, 0, $truncateAt) . '...';
             }
-
             return $post;
         }, $posts->all());
 
@@ -55,7 +54,6 @@ class PostsController extends \BaseController {
         } else {
             return Redirect::back()->withInput();
         }
-
     }
 
 
