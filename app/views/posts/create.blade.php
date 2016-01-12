@@ -8,6 +8,7 @@
 
 @section('bottom-script')
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="/js/post-create.js"></script>
 @stop
 
 @section('nav-links')
@@ -21,6 +22,8 @@
 @include('partials.navbar')
 <div class="container">
     <h1>New Post</h1>
+    <img src="" alt="your image" id="uploaded-img" style="display: none; max-width: 250px;">
+    <hr class="clear">
     <form action="{{ action('PostsController@store') }}" method="POST">
         <div class="form-group">
             <label for="title">Title</label>
@@ -29,6 +32,7 @@
         <div class="form-group">
             <label for="file" class="btn btn-default">Image (optional)</label>
             <input id="file" type="file" style="display: none;">
+            <button id="remove-img" class="btn btn-danger">Remove</button>
         </div>
         <div class="form-group">
             <label for="content">Content</label>

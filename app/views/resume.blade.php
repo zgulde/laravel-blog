@@ -127,7 +127,7 @@
             <p>My personal homepage. I wanted to create a clean, simple layout without using a pre-built template, and this page is the result. I had a lot of fun writing the javascript for a docking navbar and using jquery to animate the scrolling to internal page links. I used the <a href="http://getskeleton.com/">skeleton css framework</a> for this project.</p>
 
             <h3><a href="https://github.com/zgulde/typedMessage">typedMessage.js</a></h3>
-            <p>I came across <a href="http://lea.verou.me/2011/09/pure-css3-typing-animation-with-steps/">this cool CSS typing animation</a>, and wanted to make it easy to implement. This open-source project is some Javascript that creates a simple API to create cool looking typed messages.</p>
+            <p>I came across <a href="http://lea.verou.me/2011/09/pure-css3-typing-animation-with-steps/">a cool CSS typing animation</a>, and wanted to make it easy to implement. This open-source project is some Javascript that creates a simple API to create cool looking typed messages.</p>
 
         </div>
     </div>

@@ -27,6 +27,7 @@
         <a href="#projects" id="projects-nav">Projects</a>
         <a href="#personal" id="personal-nav">Personal</a>
         <a href="#contact" id="contact-nav">Contact</a>
+        <a href="{{action('PostsController@index')}}">Blog</a>
     </nav>
     <div class="area" id="project-area">
         <div class="container">
