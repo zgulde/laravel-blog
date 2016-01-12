@@ -5,11 +5,14 @@ img {
   border-radius: 5px; }
 
 body {
-  padding-bottom: 800px;
   background: url(/media/concrete_seamless.png);
   background-attachment: fixed;
   margin-top: -75px;
-  padding-top: 75px; }
+  padding-top: 75px;
+  font-family: 'PT Sans', sans-serif; }
+
+p {
+  font-family: 'PT Serif', serif; }
 
 a {
   text-decoration: none;
@@ -118,12 +121,24 @@ a:hover {
   height: 100%;
   width: 100%; }
 
-#personal-area {
+#navbar-space {
+  height: 0;
+  background-color: #363942; }
+
+#blog-area {
   background-color: #284907;
   color: white; }
+  #blog-area a {
+    color: #D8CAA8; }
+  #blog-area a:hover {
+    color: #005CC8; }
+  #blog-area .row {
+    margin: 30px 0; }
 
-#navbar-space {
-  height: 0; }
+#contact-area {
+  background-color: #363942;
+  color: white;
+  padding-bottom: 800px; }
 
 .navbar-docked #navbar {
   position: fixed;
@@ -176,7 +191,11 @@ a:hover {
     font-size: 3rem;
     color: white; }
 
-.hide {
-  opacity: 0; }
+.about-me {
+  background-color: #363942;
+  color: white;
+  padding-bottom: 100px; }
+  .about-me h3 {
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

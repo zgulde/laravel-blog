@@ -18,32 +18,32 @@ $(document).ready(function(){
         var windowPosition = $window.scrollTop();
 
         var projectsOffset = $('#projects').offset().top;
+        var blogOffset = $('#blog').offset().top;
         var personalOffset = $('#personal').offset().top;
         var contactOffset = $('#contact').offset().top - 20;
 
         //set current navlink
         $('#navbar a').removeClass('nav-current');
 
-        if(windowPosition >= projectsOffset && windowPosition < personalOffset){
+        if(windowPosition >= projectsOffset && windowPosition < blogOffset){
             $('#projects-nav').addClass('nav-current');
-        }
-        if(windowPosition >= personalOffset && windowPosition < contactOffset){
+        } else if (windowPosition >= blogOffset && windowPosition < personalOffset) {
+            $('#blog-nav').addClass('nav-current');
+        } else if(windowPosition >= personalOffset && windowPosition < contactOffset){
             $('#personal-nav').addClass('nav-current');
-        }
-        if(windowPosition >= contactOffset){
+        } else if(windowPosition >= contactOffset){
             $('#contact-nav').addClass('nav-current');
         }
 
         //navbar docking
         if(navOffsetTop < windowPosition && !$body.hasClass('navbar-docked')) {
             $body.addClass('navbar-docked');
-        }
-        if(navOffsetTop > windowPosition && $body.hasClass('navbar-docked')) {
+        } else if(navOffsetTop > windowPosition && $body.hasClass('navbar-docked')) {
             $body.removeClass('navbar-docked');
         }
 
         // hero sidebar
-        if (windowPosition > navOffsetTop - 200) {
+        if (windowPosition > 250) {
             $('.hero-sidebar').css({
                 right: '-50px'
             });

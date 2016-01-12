@@ -27,6 +27,9 @@
     <form action="{{ action('PostsController@store') }}" method="POST">
         <div class="form-group">
             <label for="title">Title</label>
+
+            {{ $errors->first('title', '<span class="help-block">:message</span>') }}
+            
             <input id="title" name="title" type="text" class="form-control" value="{{{ Input::old('title') }}}">
         </div>
         <div class="form-group">
@@ -36,6 +39,9 @@
         </div>
         <div class="form-group">
             <label for="content">Content</label>
+
+            {{$errors->first('content', '<span class="help-block">:message</span>')}}
+            
             <textarea class="form-control" rows="10" name="content" id="content">{{{ Input::old('content') }}}</textarea>
         </div>
         <input type="submit" class="btn btn-primary">

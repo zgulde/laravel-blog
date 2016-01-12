@@ -9,7 +9,8 @@ class PostsController extends \BaseController {
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::all()->sortBy('created_at');
+        $posts = array_reverse($posts->all());
 
         $posts = array_map(function($post){
             $truncateAt = 750;
@@ -17,7 +18,7 @@ class PostsController extends \BaseController {
                 $post->content = substr($post->content, 0, $truncateAt) . '...';
             }
             return $post;
-        }, $posts->all());
+        }, $posts);
 
         $data = ['posts' => $posts];
 
@@ -73,6 +74,7 @@ class PostsController extends \BaseController {
         if (is_numeric($idOrTitle)) {
             $post = Post::find($idOrTitle);
         } else {
+            $idOrTitle = preg_replace('/-/', ' ', $idOrTitle);
             $post = Post::where('title', '=', $idOrTitle)->first();
         }
 

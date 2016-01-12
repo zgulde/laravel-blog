@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h2>
-                        <a href="{{{action('PostsController@show', $post->title )}}}">{{{ $post->title }}}</a>
+                        <a href="{{{action('PostsController@show', Str::slug($post->title) )}}}">{{{ $post->title }}}</a>
                      </h2>
                     @if($post->image)
                         <img src="{{{ $post->image }}}" alt="{{{ $post->title . ' image' }}}" class="pull-left" style="max-width: 20%; margin: 0 15px 1px 0">

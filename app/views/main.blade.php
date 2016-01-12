@@ -6,16 +6,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif' rel='stylesheet' type='text/css'>
 @stop
 
 @section('bottom-script')
     <script type="text/javascript" src="js/main.js"></script>
-@stop
-
-@section('nav-links')
-    <a href="#projects" id="projects-nav">Projects</a>
-    <a href="#personal" id="personal-nav">Personal</a>
-    <a href="#contact" id="contact-nav">Contact</a>
 @stop
 
 @section('content')
@@ -35,10 +30,21 @@
     <div id="navbar-space"></div>
     <nav id="navbar">
         <a href="#projects" id="projects-nav">Projects</a>
+        <a href="#blog" id="blog-nav">Blog</a>
         <a href="#personal" id="personal-nav">Personal</a>
         <a href="#contact" id="contact-nav">Contact</a>
-        <a href="{{action('PostsController@index')}}">Blog</a>
     </nav>
+    <div class="area about-me">
+        <div class="container">
+            <div class="row">
+                <div class="two columns">&nbsp;</div>
+                <div class="eight columns">
+                    <h3>About Me</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim adipisci nostrum, nobis dolore natus commodi aut quo exercitationem ut repellendus, cumque quidem cupiditate quis ullam doloremque! Doloribus tempore facilis quas!</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="area" id="project-area">
         <div class="container">
             <a id="projects" class="navlink"></a>
@@ -84,6 +90,41 @@
             </div>
         </div>
     </div>
+    <div class="area" id="blog-area">
+        <div class="container">
+            <a id="blog" class="navlink"></a>
+            <div class="row heading">
+                <h2>Blog</h2>
+            </div>
+            <div class="row">
+                <div class="two columns">
+                    <img src="http://placehold.it/500" alt="blog post pic" class="u-max-full-width">
+                </div>
+                <div class="ten columns">
+                    <h3><a href="#">something</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet natus eum, impedit. Officia asperiores pariatur voluptatem quos ad aliquid illo. Saepe sed reprehenderit cupiditate, alias officia nulla ad a temporibus!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="two columns">
+                    <img src="http://placehold.it/500" alt="blog post pic" class="u-max-full-width">
+                </div>
+                <div class="ten columns">
+                    <h3><a href="#">something</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet natus eum, impedit. Officia asperiores pariatur voluptatem quos ad aliquid illo. Saepe sed reprehenderit cupiditate, alias officia nulla ad a temporibus!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="two columns">
+                    <img src="http://placehold.it/500" alt="blog post pic" class="u-max-full-width">
+                </div>
+                <div class="ten columns">
+                    <h3><a href="#">something</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet natus eum, impedit. Officia asperiores pariatur voluptatem quos ad aliquid illo. Saepe sed reprehenderit cupiditate, alias officia nulla ad a temporibus!</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="area" id="personal-area">
         <div class="container">
             <a id="personal" class="navlink"></a>
@@ -92,7 +133,7 @@
             </div>
             <div class="row personal">
                 <div class="twelve columns">
-                    <p>When I'm not at work or school I love spending time with my girlfriend, Heather, and my son, Ryan. I also enjoy playing the guitar, drinking craft beer, and hearing terrible puns.</p>
+                    <p>When I'm not at work or school I love spending time with my girlfriend, Heather, and my son, Ryan. I also enjoy playing the guitar, drinking craft beer, and listening to terrible jokes.</p>
                 </div>
             </div>
             <div class="row personal">
