@@ -36,17 +36,6 @@ a:hover{
     color: #005CC8;
 }
 
-.swatch{
-    height: $swatch-size;
-    width: $swatch-size;
-}
-
-.swatches{
-    position: fixed;
-    right: 5px;
-    bottom: 0;
-}
-
 .area{
     width: 100%;
     margin: 0;
@@ -222,41 +211,25 @@ a:hover{
     margin: 100px 0;
 }
 
-.card-2,
-.card-1,
-.card-0,
-.card-3,
-.card-4{
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 3px 3px 2px black;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.card-0{
-    background-color: $color-0;
-}
-
-.card-1{
-    background-color: $color-1;
-}
-
-.card-2{
-    background-color: $color-2;
-    color: white;
-}
-
-.card-3{
-    background-color: $color-3;
-    color: white;
-}
-
-.card-4{
-    background-color: $color-4;
-    color: white;
-}
-
 .clear{
     clear: both;
+}
+
+.hero-sidebar{
+    position: fixed;
+    top: 0;
+    right: 10px;
+    transition: all 0.5s;
+    overflow: hidden;
+
+    i{
+        display: block;
+        margin: 10px 10px;
+        font-size: 3rem;
+        color: white;
+    }
+}
+
+.hide{
+    opacity: 0;
 }

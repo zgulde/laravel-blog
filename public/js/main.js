@@ -41,6 +41,17 @@ $(document).ready(function(){
         if(navOffsetTop > windowPosition && $body.hasClass('navbar-docked')) {
             $body.removeClass('navbar-docked');
         }
+
+        // hero sidebar
+        if (windowPosition > navOffsetTop - 200) {
+            $('.hero-sidebar').css({
+                right: '-50px'
+            });
+        } else {
+            $('.hero-sidebar').css({
+                right: '10px'
+            });
+        }
     }
 
     function openModal($modal){

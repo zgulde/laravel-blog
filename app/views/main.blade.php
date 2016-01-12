@@ -5,6 +5,7 @@
 @section('top-script')
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 @stop
 
 @section('bottom-script')
@@ -21,6 +22,15 @@
     <div class="area" id="title-area">
         <h1 class="hero-text-title">Zach Gulde</h1>
         <h5 class="hero-text-subtitle">Web Developer, Weekend Bartender, Full-Time Father</h5>
+
+        <div class="hero-sidebar">
+            <a href="http://github.com/zgulde"><i class="fa fa-github"></i></a>
+            <a href="mailto:zachgulde@gmail.com"><i class="fa fa-envelope"></i></a>
+            <a href=""><i class="fa fa-linkedin-square"></i></a>
+            <a href="http://soundcloud.com/intracoastalturnaround"><i class="fa fa-soundcloud"></i></a>
+            <a href="codepen.io/zgulde"><i class="fa fa-codepen"></i></a>
+            <a href="#contact"><i class="fa fa-info-circle"></i></a>
+        </div>
     </div>
     <div id="navbar-space"></div>
     <nav id="navbar">
