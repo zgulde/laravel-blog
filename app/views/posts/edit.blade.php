@@ -10,22 +10,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 @stop
 
+@section('nav-links')
+    <a href="{{ action('HomeController@showLanding') }}">Home</a>
+    <a href="{{ action('PostsController@index') }}">Blog</a>
+    <a href="{{ action('PostsController@create') }}">New Post</a>
+    <a href="{{ action('HomeController@showLanding') }}#contact">Contact</a>
+@stop
+
 @section('content')
+    @include('partials.navbar')
     <div class="container">
-        <form action="{{ action('PostsController@update', $post->id) }}" method="PUT">
+        <h2>Editing <strong>{{{ $post->title }}}</strong> </h2>
+        {{ Form::model($post, [ 'action' => ['PostsController@update', $post->id], 'method' => 'PUT' ]) }}
             <div class="form-group">
-                <label for="title">Title</label>
-                <input id="title" name="title" type="text" class="form-control" value="{{{ $post->title }}}">
+                {{ Form::label('title', 'Title') }}
+                {{ Form::text('title', null, ['class' => 'form-control']) }}
             </div>
             <div class="form-group">
-                <label for="image">Image (optional)</label>
-                <input id="file" type="file">
+                {{ Form::label('file', 'Image (optional)', ['class' => 'btn btn-default']) }}
+                {{ Form::file('file',['style' => 'display: none;']) }}
+                {{ Form::button('Remove', ['id' => 'remove-img', 'class' => 'btn btn-danger']) }}
             </div>
             <div class="form-group">
-                <label for="content">Content</label>
-                <textarea class="form-control" rows="10" name="content" id="content">{{{ $post->content }}}</textarea>
+                {{ Form::label('content', 'Content') }}
+                {{ Form::textarea('content', null, ['class' => 'form-control']) }}
             </div>
             <input type="submit" class="btn btn-primary">
-        </form>
+        {{ Form::close() }}
     </div>
 @stop

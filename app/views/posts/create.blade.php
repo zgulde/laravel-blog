@@ -24,27 +24,21 @@
     <h1>New Post</h1>
     <img src="" alt="your image" id="uploaded-img" style="display: none; max-width: 250px;">
     <hr class="clear">
-    <form action="{{ action('PostsController@store') }}" method="POST">
-        <div class="form-group">
-            <label for="title">Title</label>
-
-            {{ $errors->first('title', '<span class="help-block">:message</span>') }}
-            
-            <input id="title" name="title" type="text" class="form-control" value="{{{ Input::old('title') }}}">
-        </div>
-        <div class="form-group">
-            <label for="file" class="btn btn-default">Image (optional)</label>
-            <input id="file" type="file" style="display: none;">
-            <button id="remove-img" class="btn btn-danger">Remove</button>
-        </div>
-        <div class="form-group">
-            <label for="content">Content</label>
-
-            {{$errors->first('content', '<span class="help-block">:message</span>')}}
-            
-            <textarea class="form-control" rows="10" name="content" id="content">{{{ Input::old('content') }}}</textarea>
-        </div>
-        <input type="submit" class="btn btn-primary">
-    </form>
+    {{ Form::open(['action' => 'PostsController@store', 'files' => true]) }}
+    <div class="form-group">
+        {{ Form::label('title', 'Title') }}
+        {{ Form::text('title', null, ['class' => 'form-control']) }}
+    </div>
+    <div class="form-group">
+        {{ Form::label('file', 'Image (optional)', ['class' => 'btn btn-default']) }}
+        {{ Form::file('file',['style' => 'display: none;']) }}
+        {{ Form::button('Remove', ['id' => 'remove-img', 'class' => 'btn btn-danger']) }}
+    </div>
+    <div class="form-group">
+        {{ Form::label('content', 'Content') }}
+        {{ Form::textarea('content', null, ['class' => 'form-control']) }}
+    </div>
+    {{ Form::submit('Submit', ['class' => 'btn btn-primary']) }}
+    {{ Form::close() }}
 </div>
 @stop

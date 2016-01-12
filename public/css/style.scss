@@ -243,6 +243,10 @@ a:hover{
     clear: both;
 }
 
+.center{
+    text-align: center;
+}
+
 .hero-sidebar{
     position: fixed;
     top: 0;
@@ -266,5 +270,11 @@ a:hover{
 
     h3{
         text-align: center;
+    }
+}
+
+.delete-post{
+    form{
+        display: none;
     }
 }

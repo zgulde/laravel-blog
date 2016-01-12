@@ -10,6 +10,16 @@
 
 @section('bottom-script')
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+
+    $('#delete-btn').click(function(e){
+        e.preventDefault();
+        if (confirm('Are you sure you want to delete this post?')) {
+            $('.delete-post form').submit();
+        }
+    });
+
+    </script>
 @stop
 
 @section('nav-links')
@@ -29,6 +39,16 @@
                 <img src="{{{ $post->image }}}" alt="{{{ $post->title . ' image' }}}" class="pull-left" style="max-width: 40%; margin: 0 15px 1px 0">
             @endif
             <p>{{{ $post->content }}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-1 delete-post">
+            <a class="btn btn-warning" href=" {{ action('PostsController@edit', $post->id) }} ">Edit</a>
+            <a href="#" id="delete-btn" class="btn btn-danger">Delete</a>
+
+            {{ Form::open([ 'action' => ['PostsController@destroy', $post->id], 'method' => 'DELETE' ]) }}
+            {{ Form::submit('Delete', [ 'class' => 'btn btn-danger' ]) }}
+            {{ Form::close() }}
         </div>
     </div>
 </div>

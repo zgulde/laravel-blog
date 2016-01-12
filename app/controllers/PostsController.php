@@ -112,8 +112,6 @@ class PostsController extends \BaseController {
         $post->user_id = 1;
         $post->save();
 
-        dd('test');
-
         return Redirect::action('PostsController@show', $post->id);
     }
 
@@ -128,6 +126,8 @@ class PostsController extends \BaseController {
     {
         $post = Post::find($id);
         $post->delete();
+
+        return Redirect::action('PostsController@index');
     }
 
 

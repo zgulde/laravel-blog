@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif' rel='stylesheet' type='text/css'>
 @stop
 
 @section('bottom-script')
@@ -123,6 +122,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet natus eum, impedit. Officia asperiores pariatur voluptatem quos ad aliquid illo. Saepe sed reprehenderit cupiditate, alias officia nulla ad a temporibus!</p>
                 </div>
             </div>
+            <h5 class="center"><a href="{{ action('PostsController@index') }}">View all posts</a></h5>
         </div>
     </div>
     <div class="area" id="personal-area">

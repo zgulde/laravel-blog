@@ -4,6 +4,7 @@
     <title>@yield('title')</title>
     @yield('top-script')
     <link rel="stylesheet" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif' rel='stylesheet' type='text/css'>
 </head>
 <body>
     @yield('content')
