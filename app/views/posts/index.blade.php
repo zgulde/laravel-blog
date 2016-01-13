@@ -43,7 +43,6 @@
                     <p class="date-created" data-toggle="tooltip" data-placement="bottom" title="{{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y h:i A') }}}">
                         Created {{{ $post->created_at->diffForHumans() }}} 
                     </p>
-                    {{-- format('l, F jS Y @ h:i:s A')-> --}}
                 </div>
             </div>
         @endforeach
