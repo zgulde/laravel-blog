@@ -48,6 +48,8 @@ class PostsController extends \BaseController {
         $validator = Validator::make(Input::all(), Post::$rules);
 
         if ( $validator->fails() ) {
+            Session::flash('errorMessage', 'Invalid Post!!!');
+            Log::error('Failed post creation', Input::all());
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
             $post = new Post();
@@ -58,7 +60,15 @@ class PostsController extends \BaseController {
 
             $post->save();
 
-            return Redirect::action('PostsController@show', $post->id);
+            $link = [
+                'target' => '/posts/' . $post->id,
+                'text' => 'view post'
+            ];
+
+            Session::flash('successMessage', 'Post Created');
+            Session::flash('link', $link);
+
+            return Redirect::action('PostsController@index');
         }
     }
 

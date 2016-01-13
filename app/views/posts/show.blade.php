@@ -34,7 +34,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-1">
-            <h2> {{{ $post->title }}} </h2>
+            <h2> 
+                {{{ $post->title }}} 
+                <small class="pull-right">
+                    Created
+                </small>
+            </h2>
             @if($post->image)
                 <img src="{{{ $post->image }}}" alt="{{{ $post->title . ' image' }}}" class="pull-left" style="max-width: 40%; margin: 0 15px 1px 0">
             @endif

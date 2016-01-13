@@ -1,6 +1,6 @@
 <?php
 
-class Post extends Eloquent
+class Post extends BaseModel
 {
     protected $table = 'posts';
 
@@ -8,4 +8,9 @@ class Post extends Eloquent
         'title'   => 'required|min:4|max:250',
         'content' => 'required'
     ];
+
+    public function getSlugAttribute()
+    {
+        return Str::slug($this->attributes['title']);
+    }
 }
