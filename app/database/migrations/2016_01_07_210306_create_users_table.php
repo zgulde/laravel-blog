@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration {
 			$table->string('last_name', 100);
 			$table->string('username')->unique();
 			$table->string('location');
+			$table->rememberToken();
 			$table->timestamps();
 		});
 	}

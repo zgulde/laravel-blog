@@ -27,14 +27,8 @@ Route::get('/simple-simon', 'HomeController@showSimpleSimon');
 
 Route::resource('posts', 'PostsController');
 
-Route::post('/test', function(){
-    $user = new User();
-    $user->email = Input::get('email');
-    $user->password = Input::get('password');
-    $user->first_name = Input::get('first_name');
-    $user->last_name = Input::get('last_name');
-    $user->username = Input::get('username');
-    $user->location = Input::get('location');
-    $user->save();
-    return 'success!';
-});
+Route::get('/login', 'HomeController@getLogin');
+
+Route::post('/login', 'HomeController@postLogin');
+
+Route::get('/logout', 'HomeController@getLogout');

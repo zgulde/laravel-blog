@@ -60,4 +60,29 @@ class HomeController extends BaseController {
 
         return View::make('roll-dice')->with($data);
     }
+
+    public function getLogin()
+    {
+        return View::make('login');
+    }
+
+    public function postLogin()
+    {
+
+        $email = Input::get('email');
+        $password = Input::get('password');
+
+        if (Auth::attempt(['email' => $email, 'password' => $password]) ) {
+            return Redirect::intended('/posts');
+        } else {
+            Session::flash('errorMessage', 'Invalid Login!');
+            return Redirect::back()->withInput();
+        }
+    }
+
+    public function getLogout()
+    {
+        Auth::Logout();
+        return Redirect::action('PostsController@index');
+    }
 }

@@ -25,6 +25,8 @@
     <img src="" alt="your image" id="uploaded-img" style="display: none; max-width: 250px;">
     <hr class="clear">
     {{ Form::open(['action' => 'PostsController@store', 'files' => true]) }}
+        {{ Form::token() }}
+
     <div class="form-group">
         {{ Form::label('title', 'Title') }}
         {{ Form::text('title', null, ['class' => 'form-control']) }}

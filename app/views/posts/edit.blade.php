@@ -22,6 +22,8 @@
     <div class="container">
         <h2>Editing <strong>{{{ $post->title }}}</strong> </h2>
         {{ Form::model($post, [ 'action' => ['PostsController@update', $post->id], 'method' => 'PUT' ]) }}
+            {{ Form::token() }}
+
             <div class="form-group">
                 {{ Form::label('title', 'Title') }}
                 {{ Form::text('title', null, ['class' => 'form-control']) }}

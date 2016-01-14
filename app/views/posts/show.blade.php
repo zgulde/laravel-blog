@@ -52,7 +52,7 @@
             <a href="#" id="delete-btn" class="btn btn-danger">Delete</a>
 
             {{ Form::open([ 'action' => ['PostsController@destroy', $post->id], 'method' => 'DELETE' ]) }}
-            {{ Form::submit('Delete', [ 'class' => 'btn btn-danger' ]) }}
+                {{ Form::submit('Delete', [ 'class' => 'btn btn-danger' ]) }}
             {{ Form::close() }}
         </div>
     </div>
