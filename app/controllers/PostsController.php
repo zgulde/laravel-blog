@@ -9,8 +9,7 @@ class PostsController extends \BaseController {
      */
     public function index()
     {
-        $posts = Post::all()->sortBy('created_at');
-        $posts = array_reverse($posts->all());
+        $posts = Post::with('user')->orderBy('created_at', 'DESC')->get()->all();
 
         $posts = array_map(function($post){
             $truncateAt = 750;
