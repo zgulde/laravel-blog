@@ -121,6 +121,10 @@ a:hover {
   height: 100%;
   width: 100%; }
 
+#personal-area {
+  background-color: #284907;
+  color: white; }
+
 #navbar-space {
   height: 0;
   background-color: #363942; }
@@ -136,8 +140,6 @@ a:hover {
     margin: 30px 0; }
 
 #contact-area {
-  background-color: #363942;
-  color: white;
   padding-bottom: 800px; }
 
 .navbar-docked #navbar {

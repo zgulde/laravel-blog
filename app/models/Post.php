@@ -13,4 +13,9 @@ class Post extends BaseModel
     {
         return Str::slug($this->attributes['title']);
     }
+
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }
 }

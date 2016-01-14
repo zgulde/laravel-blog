@@ -18,18 +18,17 @@
         <h5 class="hero-text-subtitle">Web Developer, Weekend Bartender, Full-Time Father</h5>
 
         <div class="hero-sidebar">
-            <a href="http://github.com/zgulde"><i class="fa fa-github"></i></a>
             <a href="mailto:zachgulde@gmail.com"><i class="fa fa-envelope"></i></a>
-            <a href=""><i class="fa fa-linkedin-square"></i></a>
+            <a href="http://github.com/zgulde"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/zachary-gulde-b2345510b?trk=hp-identity-name"><i class="fa fa-linkedin-square"></i></a>
+            <a href="http://codepen.io/zgulde"><i class="fa fa-codepen"></i></a>
             <a href="http://soundcloud.com/intracoastalturnaround"><i class="fa fa-soundcloud"></i></a>
-            <a href="codepen.io/zgulde"><i class="fa fa-codepen"></i></a>
             <a href="#contact"><i class="fa fa-info-circle"></i></a>
         </div>
     </div>
     <div id="navbar-space"></div>
     <nav id="navbar">
         <a href="#projects" id="projects-nav">Projects</a>
-        <a href="#blog" id="blog-nav">Blog</a>
         <a href="#personal" id="personal-nav">Personal</a>
         <a href="#contact" id="contact-nav">Contact</a>
     </nav>
@@ -39,7 +38,7 @@
                 <div class="two columns">&nbsp;</div>
                 <div class="eight columns">
                     <h3>About Me</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim adipisci nostrum, nobis dolore natus commodi aut quo exercitationem ut repellendus, cumque quidem cupiditate quis ullam doloremque! Doloribus tempore facilis quas!</p>
+                    <p>Hi! My name is Zach Gulde. I'm currently a student at Codeup, a full-stack coding bootcamp, and hope to obtain a position as a full-time developer when I graduate. I bartend on the weekends, and have an awesome family that I love spending time with. I like learning about the tech industry and keeping up with the latest trends and technologies. When I'm not in front of my computer, I enjoy playing the guitar.</p>
                 </div>
             </div>
         </div>
@@ -89,42 +88,6 @@
             </div>
         </div>
     </div>
-    <div class="area" id="blog-area">
-        <div class="container">
-            <a id="blog" class="navlink"></a>
-            <div class="row heading">
-                <h2>Blog</h2>
-            </div>
-            <div class="row">
-                <div class="two columns">
-                    <img src="http://placehold.it/500" alt="blog post pic" class="u-max-full-width">
-                </div>
-                <div class="ten columns">
-                    <h3><a href="#">something</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet natus eum, impedit. Officia asperiores pariatur voluptatem quos ad aliquid illo. Saepe sed reprehenderit cupiditate, alias officia nulla ad a temporibus!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="two columns">
-                    <img src="http://placehold.it/500" alt="blog post pic" class="u-max-full-width">
-                </div>
-                <div class="ten columns">
-                    <h3><a href="#">something</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet natus eum, impedit. Officia asperiores pariatur voluptatem quos ad aliquid illo. Saepe sed reprehenderit cupiditate, alias officia nulla ad a temporibus!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="two columns">
-                    <img src="http://placehold.it/500" alt="blog post pic" class="u-max-full-width">
-                </div>
-                <div class="ten columns">
-                    <h3><a href="#">something</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet natus eum, impedit. Officia asperiores pariatur voluptatem quos ad aliquid illo. Saepe sed reprehenderit cupiditate, alias officia nulla ad a temporibus!</p>
-                </div>
-            </div>
-            <h5 class="center"><a href="{{ action('PostsController@index') }}">View all posts</a></h5>
-        </div>
-    </div>
     <div class="area" id="personal-area">
         <div class="container">
             <a id="personal" class="navlink"></a>
@@ -132,14 +95,8 @@
                 <h2>Personal</h2>
             </div>
             <div class="row personal">
-                <div class="twelve columns">
-                    <p>When I'm not at work or school I love spending time with my girlfriend, Heather, and my son, Ryan. I also enjoy playing the guitar, drinking craft beer, and listening to terrible jokes.</p>
-                </div>
-            </div>
-            <div class="row personal">
                 <div class="six columns">
-                    <h3>My Son</h3>
-                    <p>Ryan Patrick Gulde was born happy and healthy on January 24th, 2015. He's the baby, not the bear.</p>
+                    <p>My Son, Ryan Patrick Gulde, was born happy and healthy on January 24th, 2015. He's the baby, not the bear.</p>
                 </div>
                 <div class="six columns">
                     <img src="/media/ryan-newborn.jpg" alt="Newborn Ryan with a big stuffed bear" class="u-max-full-width">
